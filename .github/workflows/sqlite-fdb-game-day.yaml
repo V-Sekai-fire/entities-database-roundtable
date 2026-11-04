@@ -34,7 +34,8 @@ jobs:
             fold_depth: '1'
     timeout-minutes: 180
     env:
-      STORE_VERSION: 85af4d1205ab6dd9dbaae241065f108253c0479f
+      # Release tag per RFD66606-2312 (Go pseudo-version of the commit it points at).
+      STORE_VERSION: v0.0.0-20261104220514-4f98ac9661a7
       WEFT_FDB_CLUSTER_FILE: /etc/foundationdb/fdb.cluster
     steps:
       - name: Install FoundationDB server and client
